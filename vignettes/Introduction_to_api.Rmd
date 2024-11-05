@@ -11,11 +11,6 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-```r
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
 
 # Overview
 
@@ -25,21 +20,24 @@ The `api` package provides functionality to connect to the Kolada API, allowing 
 
 First, ensure you have the package installed and loaded:
 
+```r
 devtools::install_github("Quanlin222/api")
 
 library(api)
-
+```
 
 # Example: Fetching Data from the API
 
 The getdata_api function allows users to retrieve data for a specified year. The year must be between 2000 and 2023 (inclusive).
 
+```r
 year <- 2021  # Specify the year
 
 data <- getdata_api(year)  # Fetch data
+```
 
 # Error Handling
 
-The getdata_api function handles errors gracefully. If there are issues such as invalid years, HTTP errors, or empty responses, it will return NULL and print a warning message
+The getdata_api function handles errors gracefully. If there are issues such as invalid years, HTTP errors, or empty responses, it will return NULL and print a warning message.
 
 
